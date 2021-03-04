@@ -2,6 +2,10 @@
 #script to upgrade docker pihole
 
 set -x
+
+#remove current pihole image
+docker image rm pihole
+
 #get latest pihole image
 docker pull pihole/pihole:latest
 
