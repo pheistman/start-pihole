@@ -3,11 +3,11 @@
 
 set -x
 
-#remove current pihole image
-docker image rm pihole/pihole
-
 #get latest pihole image
 docker pull pihole/pihole:latest
+
+#remove current pihole image
+docker image rm pihole/pihole
 
 #delete existing docker container
 docker rm -f pihole
